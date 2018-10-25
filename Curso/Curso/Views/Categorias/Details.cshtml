@@ -1,0 +1,42 @@
+﻿@model Curso.Models.Categorias
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Categorias</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nbCategoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nbCategoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.desCategoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.desCategoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idCategoria }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

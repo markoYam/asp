@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Curso.Models.Categorias>
+
+@{
+    ViewBag.Title = "Categorias";
+}
+
+<h2>Categorias</h2>
+
+<p>
+    
+    <button class="btn btn-primary"></button>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nbCategoria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.desCategoria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nbCategoria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.desCategoria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.idCategoria }) |
+                @Html.ActionLink("Details", "Details", new { id = item.idCategoria }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.idCategoria })
+            </td>
+        </tr>
+    }
+
+</table>
